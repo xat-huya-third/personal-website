@@ -1,0 +1,1555 @@
+:root {
+  --background: #f4f5f2;
+  --surface: #ffffff;
+  --surface-soft: #f8f9f6;
+  --surface-dark: #202a26;
+  --border: #e3e6e1;
+  --border-dark: #d6dad5;
+  --text: #1d2723;
+  --text-soft: #69736f;
+  --text-muted: #9aa29e;
+  --green: #31584b;
+  --green-dark: #24463c;
+  --green-light: #e8efeb;
+  --gold: #ad8750;
+  --red: #a65e55;
+  --shadow: 0 0.5rem 2rem rgba(26, 38, 33, 0.045);
+  --sidebar: 15.5rem;
+  --topbar: 4.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  border: 0;
+}
+
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: var(--sidebar);
+  padding: 1.25rem;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+}
+
+.sidebar-top,
+.sidebar-bottom {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.app-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.4rem 0.5rem 1rem;
+}
+
+.brand-symbol {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: var(--surface);
+  background: var(--green);
+  border-radius: 0.7rem;
+  font-family: Georgia, serif;
+  font-size: 1.25rem;
+}
+
+.brand-name {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+  background: var(--surface-soft);
+}
+
+.profile-avatar,
+.top-avatar {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  color: var(--surface);
+  background: var(--green);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.profile-info {
+  display: grid;
+  min-width: 0;
+  flex: 1;
+}
+
+.profile-info strong {
+  font-size: 0.78rem;
+}
+
+.profile-info span {
+  color: var(--text-muted);
+  font-size: 0.68rem;
+}
+
+.profile-menu {
+  color: var(--text-muted);
+  font-size: 0.65rem;
+}
+
+.app-nav {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.nav-label,
+.sidebar-title {
+  margin: 0.6rem 0 0.4rem;
+  padding: 0 0.7rem;
+  color: var(--text-muted);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 2.45rem;
+  padding: 0 0.7rem;
+  color: var(--text-soft);
+  border-radius: 0.65rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.nav-item:hover {
+  color: var(--text);
+  background: var(--surface-soft);
+}
+
+.nav-item.active {
+  color: var(--green-dark);
+  background: var(--green-light);
+}
+
+.nav-icon {
+  display: grid;
+  place-items: center;
+  width: 1.2rem;
+  color: currentColor;
+  font-size: 1rem;
+}
+
+.nav-count {
+  display: grid;
+  place-items: center;
+  min-width: 1.15rem;
+  height: 1.15rem;
+  margin-left: auto;
+  color: var(--green);
+  background: var(--surface);
+  border-radius: 0.4rem;
+  font-size: 0.6rem;
+}
+
+.sidebar-card {
+  display: flex;
+  gap: 0.65rem;
+  padding: 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+  background: var(--surface-soft);
+}
+
+.sidebar-card-icon {
+  color: var(--gold);
+  font-size: 1rem;
+}
+
+.sidebar-card div {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.sidebar-card strong {
+  font-size: 0.7rem;
+}
+
+.sidebar-card span:last-child {
+  color: var(--text-muted);
+  font-size: 0.62rem;
+  line-height: 1.4;
+}
+
+.app-main {
+  width: calc(100% - var(--sidebar));
+  margin-left: var(--sidebar);
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--topbar);
+  padding: 0 2rem;
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(1rem);
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+}
+
+.breadcrumbs strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 15rem;
+  height: 2.25rem;
+  padding: 0 0.65rem;
+  color: var(--text-muted);
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+}
+
+.search input,
+.bible-search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  color: var(--text);
+  background: transparent;
+  font-size: 0.72rem;
+}
+
+.search kbd {
+  padding: 0.15rem 0.35rem;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 0.3rem;
+  background: var(--surface);
+  font-size: 0.55rem;
+  white-space: nowrap;
+}
+
+.icon-button,
+.top-avatar {
+  position: relative;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-soft);
+  border-radius: 0.6rem;
+}
+
+.top-avatar {
+  border: 0;
+  color: var(--surface);
+  background: var(--green);
+}
+
+.notification-dot {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.35rem;
+  width: 0.35rem;
+  height: 0.35rem;
+  border: 1px solid var(--surface);
+  border-radius: 50%;
+  background: var(--red);
+}
+
+.content {
+  width: min(100%, 90rem);
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.dashboard-view {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.page-heading,
+.section-toolbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.page-heading h1,
+.section-toolbar h2 {
+  margin: 0;
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.page-heading h1 {
+  font-size: 2rem;
+}
+
+.heading-description {
+  margin: 0.35rem 0 0;
+  color: var(--text-soft);
+}
+
+.overline,
+.card-kicker {
+  display: block;
+  margin: 0 0 0.3rem;
+  color: var(--gold);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.35rem;
+  padding: 0.6rem 0.95rem;
+  border-radius: 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.button-dark {
+  color: var(--surface);
+  background: var(--green);
+}
+
+.button-dark:hover {
+  background: var(--green-dark);
+}
+
+.button-light {
+  color: var(--green-dark);
+  background: var(--green-light);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(20rem, 0.8fr);
+  gap: 1rem;
+}
+
+.today-card,
+.scripture-card,
+.progress-card,
+.community-preview,
+.month-card,
+.day-agenda,
+.book-sidebar,
+.reader,
+.prayer-sidebar,
+.prayer-content,
+.forum-post,
+.forum-sidebar > div {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  box-shadow: var(--shadow);
+}
+
+.today-card {
+  grid-row: span 2;
+}
+
+.today-card,
+.scripture-card,
+.progress-card,
+.community-preview {
+  overflow: hidden;
+}
+
+.card-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem 1.3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.card-heading h2 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.card-heading a {
+  color: var(--green);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.schedule-list {
+  padding: 0.3rem 0;
+}
+
+.schedule-row {
+  display: grid;
+  grid-template-columns: 4rem 1rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+  min-height: 6rem;
+  padding: 0.9rem 1.3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.schedule-row:last-child {
+  border-bottom: 0;
+}
+
+.schedule-time {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.schedule-time strong {
+  font-size: 0.8rem;
+}
+
+.schedule-time span {
+  color: var(--text-muted);
+  font-size: 0.56rem;
+}
+
+.schedule-marker {
+  position: relative;
+  align-self: stretch;
+  display: grid;
+  place-items: center;
+}
+
+.schedule-marker::before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 100%;
+  background: var(--border);
+}
+
+.schedule-marker span {
+  position: relative;
+  z-index: 1;
+  width: 0.45rem;
+  height: 0.45rem;
+  border: 2px solid var(--surface);
+  border-radius: 50%;
+  background: var(--border-dark);
+  box-shadow: 0 0 0 1px var(--border-dark);
+}
+
+.schedule-row.current .schedule-marker span {
+  background: var(--green);
+  box-shadow: 0 0 0 1px var(--green);
+}
+
+.schedule-details h3 {
+  margin: 0.3rem 0 0;
+  font-size: 0.78rem;
+}
+
+.schedule-details p {
+  margin: 0.15rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.67rem;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.45rem;
+  color: var(--text-muted);
+  background: var(--surface-soft);
+  border-radius: 0.35rem;
+  font-size: 0.55rem;
+  font-weight: 700;
+}
+
+.tag-green {
+  color: var(--green);
+  background: var(--green-light);
+}
+
+.row-arrow {
+  color: var(--text-muted);
+}
+
+.scripture-content {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.large-cross,
+.reader-cross {
+  color: var(--gold);
+  font-family: Georgia, serif;
+}
+
+.large-cross {
+  font-size: 1.5rem;
+}
+
+.scripture-content blockquote {
+  max-width: 23rem;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  line-height: 1.55;
+  letter-spacing: -0.015em;
+}
+
+.scripture-source {
+  color: var(--text-muted);
+  font-size: 0.62rem;
+}
+
+.card-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.3rem;
+  color: var(--green);
+  border-top: 1px solid var(--border);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.progress-card {
+  padding: 1.3rem;
+}
+
+.progress-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.progress-header h2 {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.progress-value {
+  color: var(--green);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.progress-bar {
+  height: 0.4rem;
+  margin: 1.3rem 0 0.8rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--green-light);
+}
+
+.progress-bar span {
+  display: block;
+  width: 80%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--green);
+}
+
+.progress-card p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.68rem;
+}
+
+.progress-card .card-action {
+  margin: 1rem -1.3rem -1.3rem;
+}
+
+.discussion-list {
+  padding: 0.2rem 1.3rem;
+}
+
+.discussion-row {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.discussion-row:last-child {
+  border-bottom: 0;
+}
+
+.discussion-avatar,
+.post-avatar {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  color: var(--surface);
+  border-radius: 50%;
+  font-weight: 800;
+}
+
+.discussion-avatar {
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.62rem;
+}
+
+.avatar-one {
+  background: #7a6956;
+}
+
+.avatar-two {
+  background: #667c72;
+}
+
+.avatar-three {
+  background: #876e64;
+}
+
+.discussion-content {
+  display: grid;
+  min-width: 0;
+}
+
+.discussion-content strong {
+  overflow: hidden;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.discussion-content small {
+  margin-top: 0.2rem;
+  color: var(--text-muted);
+  font-size: 0.58rem;
+}
+
+.discussion-row > span:last-child {
+  color: var(--text-muted);
+}
+
+.app-section {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 7rem;
+  scroll-margin-top: 6rem;
+}
+
+.app-section:first-of-type {
+  margin-top: 7rem;
+}
+
+.section-toolbar h2 {
+  font-size: 1.8rem;
+}
+
+.reader-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.2rem;
+  border: 1px solid var(--border);
+  border-radius: 0.55rem;
+  background: var(--surface);
+}
+
+.reader-controls button {
+  width: 1.8rem;
+  height: 1.8rem;
+  color: var(--text-soft);
+  background: transparent;
+  border-radius: 0.35rem;
+}
+
+.reader-controls span {
+  color: var(--text-muted);
+  font-size: 0.65rem;
+}
+
+.schedule-app-grid {
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.75fr) minmax(0, 1.25fr);
+  gap: 1rem;
+}
+
+.month-card {
+  padding: 1.3rem;
+}
+
+.month-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.month-header strong {
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.month-header button {
+  width: 2rem;
+  height: 2rem;
+  color: var(--text-soft);
+  background: var(--surface-soft);
+  border-radius: 0.5rem;
+}
+
+.weekdays,
+.month-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.35rem;
+}
+
+.weekdays {
+  margin-bottom: 0.5rem;
+}
+
+.weekdays span {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.55rem;
+  font-weight: 800;
+}
+
+.month-days span {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  border-radius: 0.45rem;
+  color: var(--text-soft);
+  font-size: 0.68rem;
+}
+
+.month-days span:not(.muted-day):hover {
+  background: var(--surface-soft);
+}
+
+.month-days .muted-day {
+  color: #c1c6c2;
+}
+
+.month-days .selected-day {
+  color: var(--surface);
+  background: var(--green);
+  font-weight: 800;
+}
+
+.day-agenda {
+  overflow: hidden;
+}
+
+.agenda-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.agenda-header div {
+  display: grid;
+}
+
+.agenda-header span {
+  color: var(--text-muted);
+  font-size: 0.65rem;
+}
+
+.agenda-header strong {
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.agenda-item {
+  display: grid;
+  grid-template-columns: 5rem 1px minmax(0, 1fr);
+  gap: 1rem;
+  min-height: 6.5rem;
+  padding: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.agenda-item:last-child {
+  border-bottom: 0;
+}
+
+.agenda-item time {
+  color: var(--text-soft);
+  font-size: 0.67rem;
+  font-weight: 700;
+}
+
+.agenda-line {
+  background: var(--border);
+}
+
+.agenda-item h3 {
+  margin: 0.35rem 0 0.15rem;
+  font-size: 0.8rem;
+}
+
+.agenda-item p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.65rem;
+}
+
+.bible-app {
+  display: grid;
+  grid-template-columns: 14rem minmax(0, 1fr);
+  min-height: 38rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.book-sidebar {
+  border: 0;
+  border-right: 1px solid var(--border);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.bible-search {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem;
+  padding: 0 0.65rem;
+  height: 2.2rem;
+  border: 1px solid var(--border);
+  border-radius: 0.55rem;
+  color: var(--text-muted);
+  background: var(--surface-soft);
+}
+
+.book-section {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.8rem 0.75rem;
+}
+
+.book-section > span {
+  padding: 0.4rem 0.6rem;
+  color: var(--text-muted);
+  font-size: 0.58rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.book-section a {
+  padding: 0.55rem 0.6rem;
+  color: var(--text-soft);
+  border-radius: 0.45rem;
+  font-size: 0.7rem;
+}
+
+.book-section a:hover {
+  background: var(--surface-soft);
+}
+
+.book-section .book-active {
+  color: var(--green-dark);
+  background: var(--green-light);
+  font-weight: 700;
+}
+
+.reader {
+  display: flex;
+  flex-direction: column;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.reader-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.reader-heading span {
+  color: var(--text-muted);
+  font-size: 0.62rem;
+}
+
+.reader-heading h3 {
+  margin: 0.1rem 0 0;
+  font-family: Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.chapter-select {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 0.55rem;
+}
+
+.chapter-select strong {
+  font-size: 0.72rem;
+}
+
+.reader-body {
+  width: min(100%, 40rem);
+  margin: 0 auto;
+  padding: 3.5rem 2rem;
+  flex: 1;
+}
+
+.reader-cross {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.reader-body h4 {
+  margin: 0 0 2rem;
+  font-family: Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.reader-body p {
+  margin: 0 0 1.35rem;
+  color: #3f4844;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.reader-body sup {
+  margin-right: 0.35rem;
+  color: var(--gold);
+  font-family: Inter, sans-serif;
+  font-size: 0.62rem;
+  font-weight: 800;
+}
+
+.reader-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.reader-footer a {
+  color: var(--green);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.reader-footer span {
+  color: var(--text-muted);
+  font-size: 0.62rem;
+}
+
+.prayer-app {
+  display: grid;
+  grid-template-columns: 13rem minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.prayer-sidebar {
+  padding: 1rem;
+}
+
+.prayer-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 2.5rem;
+  padding: 0 0.7rem;
+  color: var(--text-soft);
+  border-radius: 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.prayer-nav span {
+  width: 1rem;
+  color: var(--text-muted);
+}
+
+.prayer-nav:hover {
+  background: var(--surface-soft);
+}
+
+.prayer-nav.active {
+  color: var(--green-dark);
+  background: var(--green-light);
+}
+
+.prayer-nav.active span {
+  color: var(--green);
+}
+
+.saved-title {
+  margin-top: 2rem;
+}
+
+.prayer-content {
+  padding: 1.5rem;
+}
+
+.prayer-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.prayer-heading h3 {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.prayer-count {
+  color: var(--text-muted);
+  font-size: 0.65rem;
+}
+
+.prayer-main-card {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+}
+
+.prayer-card-heading {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 1.2rem;
+  background: var(--surface-soft);
+  border-bottom: 1px solid var(--border);
+}
+
+.prayer-card-heading > span:first-child {
+  color: var(--gold);
+  font-size: 0.62rem;
+  font-weight: 800;
+}
+
+.prayer-card-heading div {
+  display: grid;
+}
+
+.prayer-card-heading div span {
+  color: var(--text-muted);
+  font-size: 0.58rem;
+}
+
+.prayer-card-heading strong {
+  margin-top: 0.15rem;
+  font-size: 0.72rem;
+}
+
+.prayer-reading {
+  max-width: 42rem;
+  padding: 2rem;
+}
+
+.prayer-reading p {
+  margin: 0 0 1.1rem;
+  color: #4b5550;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.95rem;
+  line-height: 1.85;
+}
+
+.prayer-reading p:last-child {
+  margin-bottom: 0;
+}
+
+.prayer-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.2rem;
+  border-top: 1px solid var(--border);
+}
+
+.prayer-footer span {
+  color: var(--text-muted);
+  font-size: 0.62rem;
+}
+
+.prayer-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.prayer-steps article {
+  display: grid;
+  grid-template-columns: 1.5rem minmax(0, 1fr);
+  gap: 0.4rem;
+  padding: 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 0.7rem;
+}
+
+.prayer-steps article > span {
+  color: var(--gold);
+  font-size: 0.58rem;
+  font-weight: 800;
+}
+
+.prayer-steps strong {
+  font-size: 0.67rem;
+}
+
+.prayer-steps small {
+  grid-column: 2;
+  color: var(--text-muted);
+  font-size: 0.58rem;
+}
+
+.forum-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 17rem;
+  gap: 1rem;
+  align-items: start;
+}
+
+.forum-main {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.forum-tabs {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 0 0.25rem 0.6rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.forum-tabs a {
+  position: relative;
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.forum-tabs a.active {
+  color: var(--green);
+}
+
+.forum-tabs a.active::after {
+  position: absolute;
+  right: 0;
+  bottom: -0.65rem;
+  left: 0;
+  height: 2px;
+  content: "";
+  background: var(--green);
+}
+
+.forum-post {
+  padding: 1.3rem;
+}
+
+.post-author {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.post-avatar {
+  width: 2.1rem;
+  height: 2.1rem;
+  font-size: 0.65rem;
+}
+
+.post-author div {
+  display: grid;
+}
+
+.post-author strong {
+  font-size: 0.7rem;
+}
+
+.post-author span {
+  color: var(--text-muted);
+  font-size: 0.58rem;
+}
+
+.forum-post h3 {
+  margin: 1rem 0 0.4rem;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.forum-post > p {
+  max-width: 48rem;
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.72rem;
+  line-height: 1.7;
+}
+
+.post-footer {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1.2rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.62rem;
+}
+
+.forum-sidebar {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.community-card,
+.topics-card {
+  display: grid;
+  gap: 0.55rem;
+  padding: 1.2rem;
+}
+
+.community-card > strong {
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.community-card > span:not(.card-kicker) {
+  color: var(--text-muted);
+  font-size: 0.62rem;
+}
+
+.member-stack {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.member-stack span {
+  display: grid;
+  place-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-right: -0.4rem;
+  color: var(--surface);
+  background: var(--green);
+  border: 2px solid var(--surface);
+  border-radius: 50%;
+  font-size: 0.48rem;
+  font-weight: 800;
+}
+
+.member-stack span:nth-child(2) {
+  background: #796c5e;
+}
+
+.member-stack span:nth-child(3) {
+  background: #697e72;
+}
+
+.member-stack span:nth-child(4) {
+  background: #8c7169;
+}
+
+.member-stack span:last-child {
+  width: auto;
+  padding: 0 0.45rem;
+  color: var(--text-soft);
+  background: var(--surface-soft);
+}
+
+.community-card > a {
+  color: var(--green);
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+.topics-card a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  color: var(--text-soft);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.68rem;
+}
+
+.topics-card a:last-child {
+  border-bottom: 0;
+}
+
+.topics-card a span {
+  color: var(--text-muted);
+  font-size: 0.58rem;
+}
+
+@media (max-width: 1050px) {
+  :root {
+    --sidebar: 13.5rem;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .today-card {
+    grid-row: auto;
+  }
+
+  .schedule-app-grid,
+  .forum-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .forum-sidebar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  :root {
+    --sidebar: 4.5rem;
+  }
+
+  .sidebar {
+    padding: 1rem 0.7rem;
+  }
+
+  .app-brand {
+    justify-content: center;
+    padding-inline: 0;
+  }
+
+  .brand-name,
+  .profile-info,
+  .profile-menu,
+  .nav-label,
+  .nav-item > span:not(.nav-icon),
+  .sidebar-card,
+  .sidebar-bottom .nav-item > span:not(.nav-icon) {
+    display: none;
+  }
+
+  .profile {
+    justify-content: center;
+    padding: 0.5rem;
+  }
+
+  .nav-item {
+    justify-content: center;
+    padding-inline: 0;
+  }
+
+  .app-main {
+    width: calc(100% - 4.5rem);
+    margin-left: 4.5rem;
+  }
+
+  .topbar {
+    padding-inline: 1rem;
+  }
+
+  .breadcrumbs {
+    display: none;
+  }
+
+  .search {
+    width: 10rem;
+  }
+
+  .content {
+    padding: 1.25rem;
+  }
+
+  .bible-app,
+  .prayer-app {
+    grid-template-columns: 1fr;
+  }
+
+  .book-sidebar,
+  .prayer-sidebar {
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .book-section {
+    display: flex;
+    align-items: center;
+    overflow: auto;
+  }
+
+  .book-section > span {
+    flex: 0 0 auto;
+  }
+
+  .prayer-sidebar {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    overflow: auto;
+  }
+
+  .saved-title {
+    display: none;
+  }
+
+  .prayer-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .forum-sidebar {
+    grid-template-columns: 1fr;
+  }
+}
+.error-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    display: none;
+    place-content: center;
+    justify-items: center;
+    gap: 0.75rem;
+    padding: 2rem;
+    background: var(--background);
+    text-align: center;
+}
+
+.error-screen:target {
+    display: grid;
+}
+
+.error-code {
+    color: var(--green);
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.error-screen h1,
+.error-screen p {
+    margin: 0;
+}
+
+.error-screen p {
+    max-width: 30rem;
+    color: var(--text-soft);
+}
+
+.error-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: var(--text);
+    font-size: 2rem;
+    text-decoration: none;
+}

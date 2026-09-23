@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orthodox</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <a class="app-brand" href="#dashboard">
+          <span class="brand-symbol">☦</span>
+          <span class="brand-name">Orthodox</span>
+        </a>
+
+        <div class="profile">
+          <div class="profile-avatar">A</div>
+          <div class="profile-info">
+            <strong>Alex</strong>
+            <span>My account</span>
+          </div>
+          <span class="profile-menu">•••</span>
+        </div>
+
+        <nav class="app-nav" aria-label="Application navigation">
+          <span class="nav-label">Workspace</span>
+
+          <a class="nav-item active" href="#dashboard">
+            <span class="nav-icon">⌂</span>
+            <span>Home</span>
+          </a>
+
+          <a class="nav-item" href="#schedule">
+            <span class="nav-icon">◫</span>
+            <span>Schedule</span>
+            <span class="nav-count">3</span>
+          </a>
+
+          <a class="nav-item" href="#bible">
+            <span class="nav-icon">▤</span>
+            <span>Bible</span>
+          </a>
+
+          <a class="nav-item" href="#prayer">
+            <span class="nav-icon">✦</span>
+            <span>Prayer</span>
+          </a>
+
+          <span class="nav-label">Community</span>
+
+          <a class="nav-item" href="#community">
+            <span class="nav-icon">◌</span>
+            <span>Forums</span>
+          </a>
+
+          <a class="nav-item" href="#community">
+            <span class="nav-icon">♧</span>
+            <span>Parish life</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-card">
+          <span class="sidebar-card-icon">☼</span>
+          <div>
+            <strong>Daily reminder</strong>
+            <span>Take a moment to pray.</span>
+          </div>
+        </div>
+
+        <a class="nav-item" href="#settings">
+          <span class="nav-icon">⚙</span>
+          <span>Settings</span>
+        </a>
+      </div>
+    </aside>
+
+    <div class="app-main">
+      <header class="topbar">
+        <div class="breadcrumbs">
+          <span>Orthodox</span>
+          <span>/</span>
+          <strong>Home</strong>
+        </div>
+
+        <div class="topbar-actions">
+          <div class="search">
+            <span>⌕</span>
+            <input type="search" placeholder="Search">
+            <kbd>⌘ K</kbd>
+          </div>
+
+          <button class="icon-button" type="button" onclick="location.hash='error'" aria-label="Notifications">
+            ♧
+            <span class="notification-dot"></span>
+          </button>
+
+          <button class="top-avatar" type="button" onclick="location.hash='error'">A</button>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="dashboard-view" id="dashboard">
+          <div class="page-heading">
+            <div>
+              <p class="overline">Tuesday, September 22</p>
+              <h1>Good evening, Alex.</h1>
+              <p class="heading-description">
+                Here is your Orthodox life at a glance.
+              </p>
+            </div>
+
+            <a class="button button-dark" href="#prayer">Start prayer</a>
+          </div>
+
+          <div class="dashboard-grid">
+            <section class="today-card">
+              <div class="card-heading">
+                <div>
+                  <span class="card-kicker">Today</span>
+                  <h2>Your schedule</h2>
+                </div>
+                <a href="#schedule">View all</a>
+              </div>
+
+              <div class="schedule-list">
+                <article class="schedule-row current">
+                  <div class="schedule-time">
+                    <strong>07:30</strong>
+                    <span>AM</span>
+                  </div>
+
+                  <div class="schedule-marker">
+                    <span></span>
+                  </div>
+
+                  <div class="schedule-details">
+                    <span class="tag tag-green">Personal</span>
+                    <h3>Morning Prayers</h3>
+                    <p>Morning prayer rule</p>
+                  </div>
+
+                  <span class="row-arrow">→</span>
+                </article>
+
+                <article class="schedule-row">
+                  <div class="schedule-time">
+                    <strong>06:00</strong>
+                    <span>PM</span>
+                  </div>
+
+                  <div class="schedule-marker">
+                    <span></span>
+                  </div>
+
+                  <div class="schedule-details">
+                    <span class="tag">Parish</span>
+                    <h3>Vespers</h3>
+                    <p>St. Nicholas Church</p>
+                  </div>
+
+                  <span class="row-arrow">→</span>
+                </article>
+
+                <article class="schedule-row">
+                  <div class="schedule-time">
+                    <strong>09:00</strong>
+                    <span>PM</span>
+                  </div>
+
+                  <div class="schedule-marker">
+                    <span></span>
+                  </div>
+
+                  <div class="schedule-details">
+                    <span class="tag">Personal</span>
+                    <h3>Compline</h3>
+                    <p>Evening prayers</p>
+                  </div>
+
+                  <span class="row-arrow">→</span>
+                </article>
+              </div>
+            </section>
+
+            <section class="scripture-card">
+              <div class="card-heading">
+                <div>
+                  <span class="card-kicker">Continue reading</span>
+                  <h2>Today's Scripture</h2>
+                </div>
+                <span class="scripture-reference">Matthew 5:3</span>
+              </div>
+
+              <div class="scripture-content">
+                <span class="large-cross">☦</span>
+                <blockquote>
+                  “Blessed are the poor in spirit, for theirs is the kingdom
+                  of heaven.”
+                </blockquote>
+                <span class="scripture-source">Matthew 5:3</span>
+              </div>
+
+              <a class="card-action" href="#bible">Continue reading <span>→</span></a>
+            </section>
+
+            <section class="progress-card">
+              <div class="progress-header">
+                <div>
+                  <span class="card-kicker">Daily practice</span>
+                  <h2>Prayer rule</h2>
+                </div>
+                <span class="progress-value">4 / 5</span>
+              </div>
+
+              <div class="progress-bar">
+                <span></span>
+              </div>
+
+              <p>You've completed four of your five planned prayers today.</p>
+
+              <a class="card-action" href="#prayer">Open prayer rule <span>→</span></a>
+            </section>
+
+            <section class="community-preview">
+              <div class="card-heading">
+                <div>
+                  <span class="card-kicker">Community</span>
+                  <h2>Recent discussions</h2>
+                </div>
+                <a href="#community">View all</a>
+              </div>
+
+              <div class="discussion-list">
+                <a class="discussion-row" href="#community">
+                  <span class="discussion-avatar avatar-one">M</span>
+                  <span class="discussion-content">
+                    <strong>What helps you keep a regular prayer rule?</strong>
+                    <small>24 replies · 2h ago</small>
+                  </span>
+                  <span>→</span>
+                </a>
+
+                <a class="discussion-row" href="#community">
+                  <span class="discussion-avatar avatar-two">J</span>
+                  <span class="discussion-content">
+                    <strong>Favorite passage from the Psalms?</strong>
+                    <small>18 replies · 4h ago</small>
+                  </span>
+                  <span>→</span>
+                </a>
+
+                <a class="discussion-row" href="#community">
+                  <span class="discussion-avatar avatar-three">E</span>
+                  <span class="discussion-content">
+                    <strong>Preparing for the Divine Liturgy</strong>
+                    <small>31 replies · Yesterday</small>
+                  </span>
+                  <span>→</span>
+                </a>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="app-section" id="schedule">
+          <div class="section-toolbar">
+            <div>
+              <p class="overline">Personal & parish</p>
+              <h2>Schedule</h2>
+            </div>
+
+            <button class="button button-dark" type="button" onclick="location.hash='error'">+ Add event</button>
+          </div>
+
+          <div class="schedule-app-grid">
+            <div class="month-card">
+              <div class="month-header">
+                <button type="button" onclick="location.hash='error'">‹</button>
+                <strong>September 2026</strong>
+                <button type="button" onclick="location.hash='error'">›</button>
+              </div>
+
+              <div class="weekdays">
+                <span>MON</span>
+                <span>TUE</span>
+                <span>WED</span>
+                <span>THU</span>
+                <span>FRI</span>
+                <span>SAT</span>
+                <span>SUN</span>
+              </div>
+
+              <div class="month-days">
+                <span class="muted-day">31</span>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+                <span>10</span>
+                <span>11</span>
+                <span>12</span>
+                <span>13</span>
+                <span>14</span>
+                <span>15</span>
+                <span>16</span>
+                <span>17</span>
+                <span>18</span>
+                <span>19</span>
+                <span>20</span>
+                <span>21</span>
+                <span class="selected-day">22</span>
+                <span>23</span>
+                <span>24</span>
+                <span>25</span>
+                <span>26</span>
+                <span>27</span>
+                <span>28</span>
+                <span>29</span>
+                <span>30</span>
+                <span class="muted-day">1</span>
+                <span class="muted-day">2</span>
+                <span class="muted-day">3</span>
+                <span class="muted-day">4</span>
+              </div>
+            </div>
+
+            <div class="day-agenda">
+              <div class="agenda-header">
+                <div>
+                  <span>Tuesday</span>
+                  <strong>September 22</strong>
+                </div>
+                <span>3 events</span>
+              </div>
+
+              <article class="agenda-item">
+                <time>07:30 AM</time>
+                <div class="agenda-line"></div>
+                <div>
+                  <span class="tag tag-green">Personal</span>
+                  <h3>Morning Prayers</h3>
+                  <p>Morning prayer rule</p>
+                </div>
+              </article>
+
+              <article class="agenda-item">
+                <time>06:00 PM</time>
+                <div class="agenda-line"></div>
+                <div>
+                  <span class="tag">Parish</span>
+                  <h3>Vespers</h3>
+                  <p>St. Nicholas Church · Main Nave</p>
+                </div>
+              </article>
+
+              <article class="agenda-item">
+                <time>09:00 PM</time>
+                <div class="agenda-line"></div>
+                <div>
+                  <span class="tag">Personal</span>
+                  <h3>Compline</h3>
+                  <p>Evening prayer rule</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="app-section" id="bible">
+          <div class="section-toolbar">
+            <div>
+              <p class="overline">Holy Scripture</p>
+              <h2>Bible</h2>
+            </div>
+
+            <div class="reader-controls">
+              <button type="button" onclick="location.hash='error'">−</button>
+              <span>Aa</span>
+              <button type="button" onclick="location.hash='error'">+</button>
+            </div>
+          </div>
+
+          <div class="bible-app">
+            <aside class="book-sidebar">
+              <div class="bible-search">
+                <span>⌕</span>
+                <input type="search" placeholder="Find a book">
+              </div>
+
+              <div class="book-section">
+                <span>Old Testament</span>
+                <a href="#bible">Genesis</a>
+                <a href="#bible">Exodus</a>
+                <a href="#bible">Psalms</a>
+                <a href="#bible">Proverbs</a>
+                <a href="#bible">Isaiah</a>
+              </div>
+
+              <div class="book-section">
+                <span>New Testament</span>
+                <a href="#bible" class="book-active">Matthew</a>
+                <a href="#bible">Mark</a>
+                <a href="#bible">Luke</a>
+                <a href="#bible">John</a>
+                <a href="#bible">Romans</a>
+                <a href="#bible">1 Corinthians</a>
+              </div>
+            </aside>
+
+            <article class="reader">
+              <div class="reader-heading">
+                <div>
+                  <span>Gospel according to</span>
+                  <h3>Matthew</h3>
+                </div>
+
+                <div class="chapter-select">
+                  <span>Chapter</span>
+                  <strong>5</strong>
+                  <span>⌄</span>
+                </div>
+              </div>
+
+              <div class="reader-body">
+                <span class="reader-cross">☦</span>
+                <h4>The Beatitudes</h4>
+
+                <p>
+                  <sup>1</sup>
+                  Seeing the crowds, he went up on the mountain, and when he
+                  sat down, his disciples came to him.
+                </p>
+
+                <p>
+                  <sup>2</sup>
+                  And he opened his mouth and taught them, saying:
+                </p>
+
+                <p>
+                  <sup>3</sup>
+                  Blessed are the poor in spirit, for theirs is the kingdom
+                  of heaven.
+                </p>
+
+                <p>
+                  <sup>4</sup>
+                  Blessed are those who mourn, for they shall be comforted.
+                </p>
+
+                <p>
+                  <sup>5</sup>
+                  Blessed are the meek, for they shall inherit the earth.
+                </p>
+
+                <p>
+                  <sup>6</sup>
+                  Blessed are those who hunger and thirst for righteousness,
+                  for they shall be satisfied.
+                </p>
+              </div>
+
+              <div class="reader-footer">
+                <a href="#bible">← Previous chapter</a>
+                <span>Matthew 5</span>
+                <a href="#bible">Next chapter →</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="app-section" id="prayer">
+          <div class="section-toolbar">
+            <div>
+              <p class="overline">Prayer life</p>
+              <h2>Prayer</h2>
+            </div>
+
+            <button class="button button-dark" type="button" onclick="location.hash='error'">+ Create collection</button>
+          </div>
+
+          <div class="prayer-app">
+            <aside class="prayer-sidebar">
+              <span class="sidebar-title">Collections</span>
+
+              <a class="prayer-nav active" href="#prayer">
+                <span>☼</span>
+                Morning
+              </a>
+
+              <a class="prayer-nav" href="#prayer">
+                <span>☾</span>
+                Evening
+              </a>
+
+              <a class="prayer-nav" href="#prayer">
+                <span>♧</span>
+                Before meals
+              </a>
+
+              <a class="prayer-nav" href="#prayer">
+                <span>♡</span>
+                Personal
+              </a>
+
+              <span class="sidebar-title saved-title">Saved</span>
+
+              <a class="prayer-nav" href="#prayer">
+                <span>☆</span>
+                Favorites
+              </a>
+            </aside>
+
+            <div class="prayer-content">
+              <div class="prayer-heading">
+                <div>
+                  <span class="card-kicker">Morning collection</span>
+                  <h3>Morning Prayers</h3>
+                </div>
+
+                <span class="prayer-count">4 prayers</span>
+              </div>
+
+              <article class="prayer-main-card">
+                <div class="prayer-card-heading">
+                  <span>01</span>
+                  <div>
+                    <span>Opening prayer</span>
+                    <strong>In the name of the Father...</strong>
+                  </div>
+                  <span>⌄</span>
+                </div>
+
+                <div class="prayer-reading">
+                  <p>
+                    In the name of the Father, and of the Son, and of the Holy
+                    Spirit. Amen.
+                  </p>
+
+                  <p>
+                    Glory to Thee, our God, glory to Thee.
+                  </p>
+
+                  <p>
+                    O heavenly King, the Comforter, the Spirit of truth, who
+                    art everywhere present and fillest all things, Treasury of
+                    good things and Giver of life: come and dwell in us.
+                  </p>
+                </div>
+
+                <div class="prayer-footer">
+                  <span>Morning prayer rule</span>
+                  <button type="button" class="button button-light" onclick="location.hash='error'">Mark complete</button>
+                </div>
+              </article>
+
+              <div class="prayer-steps">
+                <article>
+                  <span>02</span>
+                  <strong>Trisagion Prayers</strong>
+                  <small>Not started</small>
+                </article>
+
+                <article>
+                  <span>03</span>
+                  <strong>The Creed</strong>
+                  <small>Not started</small>
+                </article>
+
+                <article>
+                  <span>04</span>
+                  <strong>Prayer to the Theotokos</strong>
+                  <small>Not started</small>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="app-section" id="community">
+          <div class="section-toolbar">
+            <div>
+              <p class="overline">Orthodox community</p>
+              <h2>Forums</h2>
+            </div>
+
+            <button class="button button-dark" type="button" onclick="location.hash='error'">+ New discussion</button>
+          </div>
+
+          <div class="forum-layout">
+            <div class="forum-main">
+              <div class="forum-tabs">
+                <a class="active" href="#community">All discussions</a>
+                <a href="#community">Following</a>
+                <a href="#community">My discussions</a>
+              </div>
+
+              <article class="forum-post">
+                <div class="post-author">
+                  <span class="post-avatar avatar-one">M</span>
+                  <div>
+                    <strong>Michael A.</strong>
+                    <span>General · 2h ago</span>
+                  </div>
+                </div>
+
+                <h3>What helps you keep a regular prayer rule?</h3>
+
+                <p>
+                  I have been trying to establish a more consistent prayer
+                  routine. What practical habits have helped you stay faithful
+                  to your prayer rule?
+                </p>
+
+                <div class="post-footer">
+                  <span>♡ 42</span>
+                  <span>24 replies</span>
+                  <span>Share</span>
+                </div>
+              </article>
+
+              <article class="forum-post">
+                <div class="post-author">
+                  <span class="post-avatar avatar-two">J</span>
+                  <div>
+                    <strong>Jonathan P.</strong>
+                    <span>Scripture · 4h ago</span>
+                  </div>
+                </div>
+
+                <h3>Favorite passage from the Psalms?</h3>
+
+                <p>
+                  Is there a particular Psalm or verse you return to regularly?
+                  I would love to discover passages that others have found
+                  meaningful.
+                </p>
+
+                <div class="post-footer">
+                  <span>♡ 31</span>
+                  <span>18 replies</span>
+                  <span>Share</span>
+                </div>
+              </article>
+
+              <article class="forum-post">
+                <div class="post-author">
+                  <span class="post-avatar avatar-three">E</span>
+                  <div>
+                    <strong>Elena R.</strong>
+                    <span>Parish Life · Yesterday</span>
+                  </div>
+                </div>
+
+                <h3>Preparing for the Divine Liturgy</h3>
+
+                <p>
+                  How do you prepare during the evening and morning before
+                  attending Divine Liturgy? Sharing routines and experiences.
+                </p>
+
+                <div class="post-footer">
+                  <span>♡ 56</span>
+                  <span>31 replies</span>
+                  <span>Share</span>
+                </div>
+              </article>
+            </div>
+
+            <aside class="forum-sidebar">
+              <div class="community-card">
+                <span class="card-kicker">Your community</span>
+                <strong>St. Nicholas Parish</strong>
+                <span>128 members</span>
+
+                <div class="member-stack">
+                  <span>J</span>
+                  <span>M</span>
+                  <span>E</span>
+                  <span>A</span>
+                  <span>+124</span>
+                </div>
+
+                <a href="#community">Open parish →</a>
+              </div>
+
+              <div class="topics-card">
+                <span class="card-kicker">Popular topics</span>
+                <a href="#community">Prayer life <span>38</span></a>
+                <a href="#community">Scripture <span>24</span></a>
+                <a href="#community">Parish Life <span>19</span></a>
+                <a href="#community">Church history <span>16</span></a>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+<div id="error" class="error-screen">
+    <a href="#" class="error-close">×</a>
+    <span class="error-code">500</span>
+    <h1>Something went wrong.</h1>
+    <p>Something went wrong.</p>
+</div>
+</body>
+</html>

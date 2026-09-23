@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orthodox — Fe, oración y comunidad</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <a class="app-brand" href="#inicio">
+          <span class="brand-symbol">☦</span>
+          <span class="brand-name">Orthodox</span>
+        </a>
+
+        <div class="profile">
+          <div class="profile-avatar">A</div>
+          <div class="profile-info">
+            <strong>Alex</strong>
+            <span>Mi cuenta</span>
+          </div>
+          <span class="profile-menu">•••</span>
+        </div>
+
+        <nav class="app-nav" aria-label="Navegación principal">
+          <span class="nav-label">Espacio personal</span>
+          <a class="nav-item active" href="#inicio"><span class="nav-icon">⌂</span><span>Inicio</span></a>
+          <a class="nav-item" href="#horario"><span class="nav-icon">◫</span><span>Horario</span><span class="nav-count">3</span></a>
+          <a class="nav-item" href="#biblia"><span class="nav-icon">▤</span><span>Biblia</span></a>
+          <a class="nav-item" href="#oracion"><span class="nav-icon">✦</span><span>Oración</span></a>
+
+          <span class="nav-label">Comunidad</span>
+          <a class="nav-item" href="#foros"><span class="nav-icon">◌</span><span>Foros</span></a>
+          <a class="nav-item" href="#foros"><span class="nav-icon">♧</span><span>Vida parroquial</span></a>
+        </nav>
+      </div>
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-card">
+          <span class="sidebar-card-icon">☼</span>
+          <div>
+            <strong>Recordatorio diario</strong>
+            <span>Tómate un momento para orar.</span>
+          </div>
+        </div>
+
+        <a class="nav-item" href="#ajustes">
+          <span class="nav-icon">⚙</span>
+          <span>Ajustes</span>
+        </a>
+      </div>
+    </aside>
+
+    <div class="app-main">
+      <header class="topbar">
+        <div class="breadcrumbs">
+          <span>Orthodox</span>
+          <span>/</span>
+          <strong>Inicio</strong>
+        </div>
+
+        <div class="topbar-actions">
+          <div class="search">
+            <span>⌕</span>
+            <input type="search" placeholder="Buscar">
+            <kbd>⌘ K</kbd>
+          </div>
+          <button class="icon-button" type="button" onclick="location.hash='error'" onclick="location.hash='error'">♧<span class="notification-dot"></span></button>
+          <button class="top-avatar" type="button" onclick="location.hash='error'" onclick="location.hash='error'">A</button>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="dashboard-view" id="inicio">
+          <div class="page-heading">
+            <div>
+              <p class="overline">Martes, 22 de septiembre</p>
+              <h1>Buenas tardes, Alex.</h1>
+              <p class="heading-description">Aquí tienes tu vida ortodoxa de un vistazo.</p>
+            </div>
+            <a class="button button-dark" href="#oracion">Comenzar oración</a>
+          </div>
+
+          <div class="dashboard-grid">
+            <section class="today-card">
+              <div class="card-heading">
+                <div>
+                  <span class="card-kicker">Hoy</span>
+                  <h2>Tu horario</h2>
+                </div>
+                <a href="#horario">Ver todo</a>
+              </div>
+
+              <div class="schedule-list">
+                <article class="schedule-row current">
+                  <div class="schedule-time"><strong>07:30</strong><span>AM</span></div>
+                  <div class="schedule-marker"><span></span></div>
+                  <div class="schedule-details">
+                    <span class="tag tag-green">Personal</span>
+                    <h3>Oraciones de la mañana</h3>
+                    <p>Regla de oración matutina</p>
+                  </div>
+                  <span class="row-arrow">→</span>
+                </article>
+
+                <article class="schedule-row">
+                  <div class="schedule-time"><strong>06:00</strong><span>PM</span></div>
+                  <div class="schedule-marker"><span></span></div>
+                  <div class="schedule-details">
+                    <span class="tag">Parroquia</span>
+                    <h3>Vísperas</h3>
+                    <p>Iglesia de San Nicolás</p>
+                  </div>
+                  <span class="row-arrow">→</span>
+                </article>
+
+                <article class="schedule-row">
+                  <div class="schedule-time"><strong>09:00</strong><span>PM</span></div>
+                  <div class="schedule-marker"><span></span></div>
+                  <div class="schedule-details">
+                    <span class="tag">Personal</span>
+                    <h3>Completas</h3>
+                    <p>Oraciones de la noche</p>
+                  </div>
+                  <span class="row-arrow">→</span>
+                </article>
+              </div>
+            </section>
+
+            <section class="scripture-card">
+              <div class="card-heading">
+                <div>
+                  <span class="card-kicker">Continuar leyendo</span>
+                  <h2>Escritura de hoy</h2>
+                </div>
+                <span class="scripture-reference">Mateo 5:3</span>
+              </div>
+
+              <div class="scripture-content">
+                <span class="large-cross">☦</span>
+                <blockquote>
+                  «Bienaventurados los pobres en espíritu, porque de ellos es el reino de los cielos.»
+                </blockquote>
+                <span class="scripture-source">Mateo 5:3</span>
+              </div>
+
+              <a class="card-action" href="#biblia">Continuar leyendo <span>→</span></a>
+            </section>
+
+            <section class="progress-card">
+              <div class="progress-header">
+                <div>
+                  <span class="card-kicker">Práctica diaria</span>
+                  <h2>Regla de oración</h2>
+                </div>
+                <span class="progress-value">4 / 5</span>
+              </div>
+
+              <div class="progress-bar"><span></span></div>
+
+              <p>Has completado cuatro de tus cinco oraciones previstas para hoy.</p>
+
+              <a class="card-action" href="#oracion">Abrir regla de oración <span>→</span></a>
+            </section>
+
+            <section class="community-preview">
+              <div class="card-heading">
+                <div>
+                  <span class="card-kicker">Comunidad</span>
+                  <h2>Debates recientes</h2>
+                </div>
+                <a href="#foros">Ver todo</a>
+              </div>
+
+              <div class="discussion-list">
+                <a class="discussion-row" href="#foros">
+                  <span class="discussion-avatar avatar-one">M</span>
+                  <span class="discussion-content">
+                    <strong>¿Qué te ayuda a mantener una regla de oración?</strong>
+                    <small>24 respuestas · hace 2 h</small>
+                  </span>
+                  <span>→</span>
+                </a>
+
+                <a class="discussion-row" href="#foros">
+                  <span class="discussion-avatar avatar-two">J</span>
+                  <span class="discussion-content">
+                    <strong>¿Cuál es tu pasaje favorito de los Salmos?</strong>
+                    <small>18 respuestas · hace 4 h</small>
+                  </span>
+                  <span>→</span>
+                </a>
+
+                <a class="discussion-row" href="#foros">
+                  <span class="discussion-avatar avatar-three">E</span>
+                  <span class="discussion-content">
+                    <strong>Preparación para la Divina Liturgia</strong>
+                    <small>31 respuestas · ayer</small>
+                  </span>
+                  <span>→</span>
+                </a>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="app-section" id="horario">
+          <div class="section-toolbar">
+            <div>
+              <p class="overline">Personal y parroquial</p>
+              <h2>Horario</h2>
+            </div>
+            <button class="button button-dark" type="button">+ Añadir evento</button>
+          </div>
+
+          <div class="schedule-app-grid">
+            <div class="month-card">
+              <div class="month-header">
+                <button type="button" onclick="location.hash='error'">‹</button>
+                <strong>Septiembre 2026</strong>
+                <button type="button" onclick="location.hash='error'">›</button>
+              </div>
+
+              <div class="weekdays">
+                <span>LUN</span><span>MAR</span><span>MIÉ</span><span>JUE</span><span>VIE</span><span>SÁB</span><span>DOM</span>
+              </div>
+
+              <div class="month-days">
+                <span class="muted-day">31</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+                <span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span>
+                <span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span>
+                <span>21</span><span class="selected-day">22</span><span>23</span><span>24</span><span>25</span><span>26</span>
+                <span>27</span><span>28</span><span>29</span><span>30</span><span class="muted-day">1</span><span class="muted-day">2</span><span class="muted-day">3</span><span class="muted-day">4</span>
+              </div>
+            </div>
+
+            <div class="day-agenda">
+              <div class="agenda-header">
+                <div><span>Martes</span><strong>22 de septiembre</strong></div>
+                <span>3 eventos</span>
+              </div>
+
+              <article class="agenda-item">
+                <time>07:30 AM</time>
+                <div class="agenda-line"></div>
+                <div><span class="tag tag-green">Personal</span><h3>Oraciones de la mañana</h3><p>Regla de oración matutina</p></div>
+              </article>
+
+              <article class="agenda-item">
+                <time>06:00 PM</time>
+                <div class="agenda-line"></div>
+                <div><span class="tag">Parroquia</span><h3>Vísperas</h3><p>Iglesia de San Nicolás · Nave principal</p></div>
+              </article>
+
+              <article class="agenda-item">
+                <time>09:00 PM</time>
+                <div class="agenda-line"></div>
+                <div><span class="tag">Personal</span><h3>Completas</h3><p>Regla de oración nocturna</p></div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="app-section" id="biblia">
+          <div class="section-toolbar">
+            <div>
+              <p class="overline">Sagrada Escritura</p>
+              <h2>Biblia</h2>
+            </div>
+
+            <div class="reader-controls">
+              <button type="button" onclick="location.hash='error'">−</button><span>Aa</span><button type="button" onclick="location.hash='error'">+</button>
+            </div>
+          </div>
+
+          <div class="bible-app">
+            <aside class="book-sidebar">
+              <div class="bible-search">
+                <span>⌕</span>
+                <input type="search" placeholder="Buscar libro">
+              </div>
+
+              <div class="book-section">
+                <span>Antiguo Testamento</span>
+                <a href="#biblia">Génesis</a>
+                <a href="#biblia">Éxodo</a>
+                <a href="#biblia">Salmos</a>
+                <a href="#biblia">Proverbios</a>
+                <a href="#biblia">Isaías</a>
+              </div>
+
+              <div class="book-section">
+                <span>Nuevo Testamento</span>
+                <a href="#biblia" class="book-active">Mateo</a>
+                <a href="#biblia">Marcos</a>
+                <a href="#biblia">Lucas</a>
+                <a href="#biblia">Juan</a>
+                <a href="#biblia">Romanos</a>
+                <a href="#biblia">1 Corintios</a>
+              </div>
+            </aside>
+
+            <article class="reader">
+              <div class="reader-heading">
+                <div><span>Evangelio según</span><h3>Mateo</h3></div>
+                <div class="chapter-select"><span>Capítulo</span><strong>5</strong><span>⌄</span></div>
+              </div>
+
+              <div class="reader-body">
+                <span class="reader-cross">☦</span>
+                <h4>Las Bienaventuranzas</h4>
+
+                <p><sup>1</sup>Al ver las multitudes, subió al monte; y sentándose, vinieron a él sus discípulos.</p>
+                <p><sup>2</sup>Y abriendo su boca les enseñaba, diciendo:</p>
+                <p><sup>3</sup>Bienaventurados los pobres en espíritu, porque de ellos es el reino de los cielos.</p>
+                <p><sup>4</sup>Bienaventurados los que lloran, porque ellos recibirán consolación.</p>
+                <p><sup>5</sup>Bienaventurados los mansos, porque ellos recibirán la tierra por heredad.</p>
+                <p><sup>6</sup>Bienaventurados los que tienen hambre y sed de justicia, porque ellos serán saciados.</p>
+              </div>
+
+              <div class="reader-footer">
+                <a href="#biblia">← Capítulo anterior</a>
+                <span>Mateo 5</span>
+                <a href="#biblia">Siguiente capítulo →</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="app-section" id="oracion">
+          <div class="section-toolbar">
+            <div><p class="overline">Vida de oración</p><h2>Oración</h2></div>
+            <button class="button button-dark" type="button">+ Crear colección</button>
+          </div>
+
+          <div class="prayer-app">
+            <aside class="prayer-sidebar">
+              <span class="sidebar-title">Colecciones</span>
+              <a class="prayer-nav active" href="#oracion"><span>☼</span>Mañana</a>
+              <a class="prayer-nav" href="#oracion"><span>☾</span>Noche</a>
+              <a class="prayer-nav" href="#oracion"><span>♧</span>Antes de comer</a>
+              <a class="prayer-nav" href="#oracion"><span>♡</span>Personal</a>
+              <span class="sidebar-title saved-title">Guardado</span>
+              <a class="prayer-nav" href="#oracion"><span>☆</span>Favoritos</a>
+            </aside>
+
+            <div class="prayer-content">
+              <div class="prayer-heading">
+                <div><span class="card-kicker">Colección de la mañana</span><h3>Oraciones de la mañana</h3></div>
+                <span class="prayer-count">4 oraciones</span>
+              </div>
+
+              <article class="prayer-main-card">
+                <div class="prayer-card-heading">
+                  <span>01</span>
+                  <div><span>Oración inicial</span><strong>En el nombre del Padre...</strong></div>
+                  <span>⌄</span>
+                </div>
+
+                <div class="prayer-reading">
+                  <p>En el nombre del Padre, del Hijo y del Espíritu Santo. Amén.</p>
+                  <p>Gloria a Ti, Dios nuestro, gloria a Ti.</p>
+                  <p>Rey celestial, Consolador, Espíritu de verdad, que estás en todas partes y llenas todas las cosas, Tesoro de bienes y Dador de vida: ven y habita en nosotros.</p>
+                </div>
+
+                <div class="prayer-footer">
+                  <span>Regla de oración matutina</span>
+                  <button type="button" class="button button-light">Marcar como completada</button>
+                </div>
+              </article>
+
+              <div class="prayer-steps">
+                <article><span>02</span><strong>Oraciones Trisagias</strong><small>No iniciada</small></article>
+                <article><span>03</span><strong>El Credo</strong><small>No iniciada</small></article>
+                <article><span>04</span><strong>Oración a la Theotokos</strong><small>No iniciada</small></article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="app-section" id="foros">
+          <div class="section-toolbar">
+            <div><p class="overline">Comunidad ortodoxa</p><h2>Foros</h2></div>
+            <button class="button button-dark" type="button">+ Nueva discusión</button>
+          </div>
+
+          <div class="forum-layout">
+            <div class="forum-main">
+              <div class="forum-tabs">
+                <a class="active" href="#foros">Todas las discusiones</a>
+                <a href="#foros">Siguiendo</a>
+                <a href="#foros">Mis discusiones</a>
+              </div>
+
+              <article class="forum-post">
+                <div class="post-author"><span class="post-avatar avatar-one">M</span><div><strong>Michael A.</strong><span>General · hace 2 h</span></div></div>
+                <h3>¿Qué te ayuda a mantener una regla de oración?</h3>
+                <p>He estado intentando establecer una rutina de oración más constante. ¿Qué hábitos prácticos te han ayudado a mantener tu regla de oración?</p>
+                <div class="post-footer"><span>♡ 42</span><span>24 respuestas</span><span>Compartir</span></div>
+              </article>
+
+              <article class="forum-post">
+                <div class="post-author"><span class="post-avatar avatar-two">J</span><div><strong>Jonathan P.</strong><span>Escritura · hace 4 h</span></div></div>
+                <h3>¿Cuál es tu pasaje favorito de los Salmos?</h3>
+                <p>¿Hay algún Salmo o versículo al que regreses regularmente? Me gustaría descubrir pasajes significativos para otras personas.</p>
+                <div class="post-footer"><span>♡ 31</span><span>18 respuestas</span><span>Compartir</span></div>
+              </article>
+
+              <article class="forum-post">
+                <div class="post-author"><span class="post-avatar avatar-three">E</span><div><strong>Elena R.</strong><span>Vida parroquial · ayer</span></div></div>
+                <h3>Preparación para la Divina Liturgia</h3>
+                <p>¿Cómo te preparas durante la noche y la mañana antes de asistir a la Divina Liturgia?</p>
+                <div class="post-footer"><span>♡ 56</span><span>31 respuestas</span><span>Compartir</span></div>
+              </article>
+            </div>
+
+            <aside class="forum-sidebar">
+              <div class="community-card">
+                <span class="card-kicker">Tu comunidad</span>
+                <strong>Parroquia de San Nicolás</strong>
+                <span>128 miembros</span>
+                <div class="member-stack"><span>J</span><span>M</span><span>E</span><span>A</span><span>+124</span></div>
+                <a href="#foros">Abrir parroquia →</a>
+              </div>
+
+              <div class="topics-card">
+                <span class="card-kicker">Temas populares</span>
+                <a href="#foros">Vida de oración <span>38</span></a>
+                <a href="#foros">Escritura <span>24</span></a>
+                <a href="#foros">Vida parroquial <span>19</span></a>
+                <a href="#foros">Historia de la Iglesia <span>16</span></a>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+<div id="error" class="error-screen">
+    <a href="#" class="error-close">×</a>
+    <span class="error-code">500</span>
+    <h1>Algo salió mal.</h1>
+    <p>Something went wrong.</p>
+</div>
+</body>
+</html>

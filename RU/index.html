@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orthodox — Вера, молитва и общение</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <a class="app-brand" href="#home">
+          <span class="brand-symbol">☦</span>
+          <span class="brand-name">Orthodox</span>
+        </a>
+
+        <div class="profile">
+          <div class="profile-avatar">А</div>
+          <div class="profile-info">
+            <strong>Алекс</strong>
+            <span>Мой аккаунт</span>
+          </div>
+          <span class="profile-menu">•••</span>
+        </div>
+
+        <nav class="app-nav" aria-label="Главная навигация">
+          <span class="nav-label">Пространство</span>
+          <a class="nav-item active" href="#home"><span class="nav-icon">⌂</span><span>Главная</span></a>
+          <a class="nav-item" href="#schedule"><span class="nav-icon">◫</span><span>Расписание</span><span class="nav-count">3</span></a>
+          <a class="nav-item" href="#bible"><span class="nav-icon">▤</span><span>Библия</span></a>
+          <a class="nav-item" href="#prayer"><span class="nav-icon">✦</span><span>Молитвы</span></a>
+
+          <span class="nav-label">Общество</span>
+          <a class="nav-item" href="#community"><span class="nav-icon">◌</span><span>Форум</span></a>
+          <a class="nav-item" href="#community"><span class="nav-icon">♧</span><span>Приходская жизнь</span></a>
+        </nav>
+      </div>
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-card">
+          <span class="sidebar-card-icon">☼</span>
+          <div>
+            <strong>Ежедневное напоминание</strong>
+            <span>Найдите минуту для молитвы.</span>
+          </div>
+        </div>
+
+        <a class="nav-item" href="#settings">
+          <span class="nav-icon">⚙</span>
+          <span>Настройки</span>
+        </a>
+      </div>
+    </aside>
+
+    <div class="app-main">
+      <header class="topbar">
+        <div class="breadcrumbs">
+          <span>Orthodox</span><span>/</span><strong>Главная</strong>
+        </div>
+
+        <div class="topbar-actions">
+          <div class="search">
+            <span>⌕</span>
+            <input type="search" placeholder="Поиск">
+            <kbd>⌘ K</kbd>
+          </div>
+          <button class="icon-button" type="button" onclick="location.hash='error'" onclick="location.hash='error'">♧<span class="notification-dot"></span></button>
+          <button class="top-avatar" type="button" onclick="location.hash='error'" onclick="location.hash='error'">А</button>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="dashboard-view" id="home">
+          <div class="page-heading">
+            <div>
+              <p class="overline">Вторник, 22 сентября</p>
+              <h1>Добрый вечер, Алекс.</h1>
+              <p class="heading-description">Всё важное для вашей православной жизни — в одном месте.</p>
+            </div>
+            <a class="button button-dark" href="#prayer">Начать молитву</a>
+          </div>
+
+          <div class="dashboard-grid">
+            <section class="today-card">
+              <div class="card-heading">
+                <div><span class="card-kicker">Сегодня</span><h2>Ваше расписание</h2></div>
+                <a href="#schedule">Показать всё</a>
+              </div>
+
+              <div class="schedule-list">
+                <article class="schedule-row current">
+                  <div class="schedule-time"><strong>07:30</strong><span>AM</span></div>
+                  <div class="schedule-marker"><span></span></div>
+                  <div class="schedule-details"><span class="tag tag-green">Личное</span><h3>Утренние молитвы</h3><p>Утреннее молитвенное правило</p></div>
+                  <span class="row-arrow">→</span>
+                </article>
+
+                <article class="schedule-row">
+                  <div class="schedule-time"><strong>06:00</strong><span>PM</span></div>
+                  <div class="schedule-marker"><span></span></div>
+                  <div class="schedule-details"><span class="tag">Приход</span><h3>Вечерня</h3><p>Храм Святителя Николая</p></div>
+                  <span class="row-arrow">→</span>
+                </article>
+
+                <article class="schedule-row">
+                  <div class="schedule-time"><strong>09:00</strong><span>PM</span></div>
+                  <div class="schedule-marker"><span></span></div>
+                  <div class="schedule-details"><span class="tag">Личное</span><h3>Повечерие</h3><p>Вечерние молитвы</p></div>
+                  <span class="row-arrow">→</span>
+                </article>
+              </div>
+            </section>
+
+            <section class="scripture-card">
+              <div class="card-heading">
+                <div><span class="card-kicker">Продолжить чтение</span><h2>Сегодняшнее Евангелие</h2></div>
+                <span class="scripture-reference">Мф. 5:3</span>
+              </div>
+
+              <div class="scripture-content">
+                <span class="large-cross">☦</span>
+                <blockquote>«Блаженны нищие духом, ибо их есть Царство Небесное.»</blockquote>
+                <span class="scripture-source">Матфея 5:3</span>
+              </div>
+
+              <a class="card-action" href="#bible">Продолжить чтение <span>→</span></a>
+            </section>
+
+            <section class="progress-card">
+              <div class="progress-header">
+                <div><span class="card-kicker">Ежедневная практика</span><h2>Молитвенное правило</h2></div>
+                <span class="progress-value">4 / 5</span>
+              </div>
+
+              <div class="progress-bar"><span></span></div>
+              <p>Сегодня выполнены четыре из пяти запланированных молитв.</p>
+              <a class="card-action" href="#prayer">Открыть молитвенное правило <span>→</span></a>
+            </section>
+
+            <section class="community-preview">
+              <div class="card-heading">
+                <div><span class="card-kicker">Общество</span><h2>Последние обсуждения</h2></div>
+                <a href="#community">Показать всё</a>
+              </div>
+
+              <div class="discussion-list">
+                <a class="discussion-row" href="#community">
+                  <span class="discussion-avatar avatar-one">М</span>
+                  <span class="discussion-content"><strong>Что помогает вам соблюдать молитвенное правило?</strong><small>24 ответа · 2 ч. назад</small></span>
+                  <span>→</span>
+                </a>
+
+                <a class="discussion-row" href="#community">
+                  <span class="discussion-avatar avatar-two">И</span>
+                  <span class="discussion-content"><strong>Ваш любимый отрывок из Псалтири?</strong><small>18 ответов · 4 ч. назад</small></span>
+                  <span>→</span>
+                </a>
+
+                <a class="discussion-row" href="#community">
+                  <span class="discussion-avatar avatar-three">Е</span>
+                  <span class="discussion-content"><strong>Подготовка к Божественной литургии</strong><small>31 ответ · вчера</small></span>
+                  <span>→</span>
+                </a>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="app-section" id="schedule">
+          <div class="section-toolbar">
+            <div><p class="overline">Личное и приходское</p><h2>Расписание</h2></div>
+            <button class="button button-dark" type="button" onclick="location.hash='error'">+ Добавить событие</button>
+          </div>
+
+          <div class="schedule-app-grid">
+            <div class="month-card">
+              <div class="month-header"><button type="button" onclick="location.hash='error'">‹</button><strong>Сентябрь 2026</strong><button type="button" onclick="location.hash='error'">›</button></div>
+
+              <div class="weekdays">
+                <span>ПН</span><span>ВТ</span><span>СР</span><span>ЧТ</span><span>ПТ</span><span>СБ</span><span>ВС</span>
+              </div>
+
+              <div class="month-days">
+                <span class="muted-day">31</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+                <span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span>
+                <span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span>
+                <span>21</span><span class="selected-day">22</span><span>23</span><span>24</span><span>25</span><span>26</span>
+                <span>27</span><span>28</span><span>29</span><span>30</span><span class="muted-day">1</span><span class="muted-day">2</span><span class="muted-day">3</span><span class="muted-day">4</span>
+              </div>
+            </div>
+
+            <div class="day-agenda">
+              <div class="agenda-header">
+                <div><span>Вторник</span><strong>22 сентября</strong></div><span>3 события</span>
+              </div>
+
+              <article class="agenda-item">
+                <time>07:30 AM</time><div class="agenda-line"></div>
+                <div><span class="tag tag-green">Личное</span><h3>Утренние молитвы</h3><p>Утреннее молитвенное правило</p></div>
+              </article>
+
+              <article class="agenda-item">
+                <time>06:00 PM</time><div class="agenda-line"></div>
+                <div><span class="tag">Приход</span><h3>Вечерня</h3><p>Храм Святителя Николая · Главный храм</p></div>
+              </article>
+
+              <article class="agenda-item">
+                <time>09:00 PM</time><div class="agenda-line"></div>
+                <div><span class="tag">Личное</span><h3>Повечерие</h3><p>Вечернее молитвенное правило</p></div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="app-section" id="bible">
+          <div class="section-toolbar">
+            <div><p class="overline">Священное Писание</p><h2>Библия</h2></div>
+            <div class="reader-controls"><button type="button" onclick="location.hash='error'">−</button><span>Aa</span><button type="button" onclick="location.hash='error'">+</button></div>
+          </div>
+
+          <div class="bible-app">
+            <aside class="book-sidebar">
+              <div class="bible-search"><span>⌕</span><input type="search" placeholder="Найти книгу"></div>
+
+              <div class="book-section">
+                <span>Ветхий Завет</span>
+                <a href="#bible">Бытие</a>
+                <a href="#bible">Исход</a>
+                <a href="#bible">Псалтирь</a>
+                <a href="#bible">Притчи</a>
+                <a href="#bible">Исаия</a>
+              </div>
+
+              <div class="book-section">
+                <span>Новый Завет</span>
+                <a href="#bible" class="book-active">Матфей</a>
+                <a href="#bible">Марк</a>
+                <a href="#bible">Лука</a>
+                <a href="#bible">Иоанн</a>
+                <a href="#bible">Римлянам</a>
+                <a href="#bible">1 Коринфянам</a>
+              </div>
+            </aside>
+
+            <article class="reader">
+              <div class="reader-heading">
+                <div><span>Евангелие от</span><h3>Матфея</h3></div>
+                <div class="chapter-select"><span>Глава</span><strong>5</strong><span>⌄</span></div>
+              </div>
+
+              <div class="reader-body">
+                <span class="reader-cross">☦</span>
+                <h4>Заповеди блаженства</h4>
+                <p><sup>1</sup>Увидев народ, Он взошел на гору; и, когда сел, приступили к Нему ученики Его.</p>
+                <p><sup>2</sup>И Он, отверзши уста Свои, учил их, говоря:</p>
+                <p><sup>3</sup>Блаженны нищие духом, ибо их есть Царство Небесное.</p>
+                <p><sup>4</sup>Блаженны плачущие, ибо они утешатся.</p>
+                <p><sup>5</sup>Блаженны кроткие, ибо они наследуют землю.</p>
+                <p><sup>6</sup>Блаженны алчущие и жаждущие правды, ибо они насытятся.</p>
+              </div>
+
+              <div class="reader-footer"><a href="#bible">← Предыдущая глава</a><span>Матфея 5</span><a href="#bible">Следующая глава →</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="app-section" id="prayer">
+          <div class="section-toolbar">
+            <div><p class="overline">Молитвенная жизнь</p><h2>Молитвы</h2></div>
+            <button class="button button-dark" type="button">+ Создать подборку</button>
+          </div>
+
+          <div class="prayer-app">
+            <aside class="prayer-sidebar">
+              <span class="sidebar-title">Подборки</span>
+              <a class="prayer-nav active" href="#prayer"><span>☼</span>Утро</a>
+              <a class="prayer-nav" href="#prayer"><span>☾</span>Вечер</a>
+              <a class="prayer-nav" href="#prayer"><span>♧</span>Перед едой</a>
+              <a class="prayer-nav" href="#prayer"><span>♡</span>Личное</a>
+              <span class="sidebar-title saved-title">Сохранённое</span>
+              <a class="prayer-nav" href="#prayer"><span>☆</span>Избранное</a>
+            </aside>
+
+            <div class="prayer-content">
+              <div class="prayer-heading">
+                <div><span class="card-kicker">Утренняя подборка</span><h3>Утренние молитвы</h3></div>
+                <span class="prayer-count">4 молитвы</span>
+              </div>
+
+              <article class="prayer-main-card">
+                <div class="prayer-card-heading">
+                  <span>01</span><div><span>Начальная молитва</span><strong>Во имя Отца...</strong></div><span>⌄</span>
+                </div>
+
+                <div class="prayer-reading">
+                  <p>Во имя Отца и Сына и Святого Духа. Аминь.</p>
+                  <p>Слава Тебе, Боже наш, слава Тебе.</p>
+                  <p>Царю Небесный, Утешителю, Душе истины, Иже везде сый и вся исполняяй, Сокровище благих и Жизни Подателю, прииди и вселися в ны.</p>
+                </div>
+
+                <div class="prayer-footer"><span>Утреннее молитвенное правило</span><button type="button" class="button button-light">Отметить выполненной</button></div>
+              </article>
+
+              <div class="prayer-steps">
+                <article><span>02</span><strong>Трисвятые молитвы</strong><small>Не начато</small></article>
+                <article><span>03</span><strong>Символ веры</strong><small>Не начато</small></article>
+                <article><span>04</span><strong>Молитва Богородице</strong><small>Не начато</small></article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="app-section" id="community">
+          <div class="section-toolbar">
+            <div><p class="overline">Православное общество</p><h2>Форум</h2></div>
+            <button class="button button-dark" type="button">+ Новое обсуждение</button>
+          </div>
+
+          <div class="forum-layout">
+            <div class="forum-main">
+              <div class="forum-tabs">
+                <a class="active" href="#community">Все обсуждения</a>
+                <a href="#community">Подписки</a>
+                <a href="#community">Мои обсуждения</a>
+              </div>
+
+              <article class="forum-post">
+                <div class="post-author"><span class="post-avatar avatar-one">М</span><div><strong>Михаил А.</strong><span>Общее · 2 ч. назад</span></div></div>
+                <h3>Что помогает вам соблюдать молитвенное правило?</h3>
+                <p>Я пытаюсь выстроить более постоянную молитвенную жизнь. Какие практические привычки помогают вам сохранять молитвенное правило?</p>
+                <div class="post-footer"><span>♡ 42</span><span>24 ответа</span><span>Поделиться</span></div>
+              </article>
+
+              <article class="forum-post">
+                <div class="post-author"><span class="post-avatar avatar-two">И</span><div><strong>Иоанн П.</strong><span>Писание · 4 ч. назад</span></div></div>
+                <h3>Ваш любимый отрывок из Псалтири?</h3>
+                <p>Есть ли Псалом или стих, к которому вы регулярно возвращаетесь? Хотелось бы узнать о значимых для других людей местах.</p>
+                <div class="post-footer"><span>♡ 31</span><span>18 ответов</span><span>Поделиться</span></div>
+              </article>
+
+              <article class="forum-post">
+                <div class="post-author"><span class="post-avatar avatar-three">Е</span><div><strong>Елена Р.</strong><span>Приходская жизнь · вчера</span></div></div>
+                <h3>Подготовка к Божественной литургии</h3>
+                <p>Как вы проводите вечер и утро перед Божественной литургией? Делитесь своими привычками и опытом.</p>
+                <div class="post-footer"><span>♡ 56</span><span>31 ответ</span><span>Поделиться</span></div>
+              </article>
+            </div>
+
+            <aside class="forum-sidebar">
+              <div class="community-card">
+                <span class="card-kicker">Ваш приход</span>
+                <strong>Приход Святителя Николая</strong>
+                <span>128 участников</span>
+                <div class="member-stack"><span>И</span><span>М</span><span>Е</span><span>А</span><span>+124</span></div>
+                <a href="#community">Открыть приход →</a>
+              </div>
+
+              <div class="topics-card">
+                <span class="card-kicker">Популярные темы</span>
+                <a href="#community">Молитвенная жизнь <span>38</span></a>
+                <a href="#community">Писание <span>24</span></a>
+                <a href="#community">Приходская жизнь <span>19</span></a>
+                <a href="#community">История Церкви <span>16</span></a>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+<div id="error" class="error-screen">
+    <a href="#" class="error-close">×</a>
+    <span class="error-code">500</span>
+    <h1>Что-то пошло не так.</h1>
+    <p>Something went wrong.</p>
+</div>
+</body>
+</html>
